@@ -8,6 +8,14 @@
     "name": "Rafael Marcolino"
   },
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rafawandel/occhio-theme.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rafawandel/occhio-theme/issues"
+  },
+  "homepage": "https://github.com/rafawandel/occhio-theme#readme",
   "icon": "images/icon.png",
   "galleryBanner": {
     "color": "#080c10",

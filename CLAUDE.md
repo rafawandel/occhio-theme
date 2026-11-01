@@ -33,5 +33,5 @@ Tema escuro (fundo azul-noite, destaque ciano). Leia README.md e CHANGELOG.md an
 ## Publicacao
 
 1. Suba a versao em `package.json` e descreva as mudancas no `CHANGELOG.md` e, se for o caso, no README.
-2. `npx @vscode/vsce package --allow-missing-repository`.
+2. `npx @vscode/vsce package` (o campo `repository` ja esta preenchido).
 3. Antes de entregar, busque sem diferenciar maiusculas e minusculas, nos arquivos do projeto e dentro do .vsix (e um zip), por nomes ligados aos projetos de trabalho, conforme a regra de sigilo. Repita ate nao sobrar nada.
