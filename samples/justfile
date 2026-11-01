@@ -1,0 +1,22 @@
+# Tarefas do projeto
+set dotenv-load := true
+set shell := ["bash", "-c"]
+
+versao := "0.3.0"
+pasta := env_var_or_default("PASTA", "dist")
+
+# Lista as tarefas
+padrao:
+    @just --list
+
+# Roda os testes com filtro opcional
+testar filtro="":
+    pytest -q {{filtro}}
+
+empacotar: testar
+    mkdir -p {{pasta}}
+    echo "Gerando versao {{versao}}"
+
+[confirm]
+limpar:
+    rm -rf {{pasta}}

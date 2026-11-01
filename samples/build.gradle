@@ -1,0 +1,22 @@
+// Build Gradle em Groovy
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.3.0'
+}
+
+group = 'exemplo'
+version = '1.0.0'
+def versaoJava = 21
+
+java {
+    toolchain { languageVersion = JavaLanguageVersion.of(versaoJava) }
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation "org.junit.jupiter:junit-jupiter:5.10.2"
+}
+
+tasks.register('saudacao') {
+    doLast { println "Versao ${version} com Java $versaoJava" }
+}

@@ -1,0 +1,21 @@
+@base = https://api.example.com/v1
+@token = troque-este-token
+
+### Lista as obras
+# @name listar
+GET {{base}}/obras?pagina=1&limite=20 HTTP/1.1
+Accept: application/json
+Authorization: Bearer {{token}}
+
+### Cadastra uma obra
+POST {{base}}/obras
+Content-Type: application/json
+
+{
+  "titulo": "Poemas",
+  "ano": 1922,
+  "ativa": true
+}
+
+### Usa a resposta anterior
+GET {{base}}/obras/{{listar.response.body.$.itens[0].id}}

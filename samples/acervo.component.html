@@ -1,0 +1,14 @@
+<!-- Template Angular: sem a extensao Angular Language Service, o VS Code usa a gramatica HTML -->
+<section class="acervo" id="lista-obras">
+  <h2>{{ titulo }}</h2>
+  @if (obras().length > 0) {
+    <ul>
+      <li *ngFor="let obra of obras(); trackBy: porId" (click)="abrir(obra)" [class.rara]="obra.ano < 1900">
+        {{ obra.titulo | uppercase }}
+      </li>
+    </ul>
+  } @else {
+    <p class="vazio">Nenhuma obra</p>
+  }
+  <input type="search" placeholder="Buscar" [(ngModel)]="filtro" disabled />
+</section>

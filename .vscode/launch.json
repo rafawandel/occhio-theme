@@ -1,0 +1,12 @@
+{
+    // F5 abre uma janela do VS Code com o tema deste projeto carregado
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Testar o tema",
+            "type": "extensionHost",
+            "request": "launch",
+            "args": ["--extensionDevelopmentPath=${workspaceFolder}", "${workspaceFolder}/samples"]
+        }
+    ]
+}

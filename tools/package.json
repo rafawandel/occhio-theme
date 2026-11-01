@@ -1,0 +1,9 @@
+{
+  "name": "occhio-tools",
+  "private": true,
+  "description": "Ferramentas para conferir o tema contra as gramaticas reais",
+  "dependencies": {
+    "vscode-oniguruma": "^2.0.1",
+    "vscode-textmate": "^9.0.0"
+  }
+}

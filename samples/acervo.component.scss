@@ -1,0 +1,32 @@
+// Estilos SCSS do componente
+@use "sass:math";
+
+$destaque: #00d4ff;
+$espaco: 8px;
+
+@mixin cartao($raio: 4px) {
+  border-radius: $raio;
+  padding: $espaco * 2;
+}
+
+:host {
+  display: block;
+}
+
+.acervo {
+  @include cartao(6px);
+  color: lighten($destaque, 10%);
+
+  &__titulo {
+    font-size: math.div(24px, 1.5);
+  }
+
+  li {
+    &:hover { color: $destaque; }
+    &.rara { font-style: italic; }
+  }
+
+  @each $nome, $cor in (ok: #00e676, erro: #ff3d57) {
+    .status-#{$nome} { color: $cor; }
+  }
+}

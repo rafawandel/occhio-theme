@@ -1,0 +1,5 @@
+# Dependencias de exemplo
+requests>=2.31,<3
+fastapi[standard]==0.115.0
+pydantic ~= 2.8
+-r requirements-dev.txt

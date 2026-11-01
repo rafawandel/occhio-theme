@@ -1,0 +1,21 @@
+# Dependencias e artefatos
+node_modules/
+tools/node_modules/
+*.vsix
+*.zip
+__pycache__/
+*.pyc
+
+# Saidas temporarias do inspetor
+tools/saida*/
+
+# Editor e sistema (de .vscode/ so ficam no projeto a configuracao do F5 e as exclusoes da extensao Java)
+.vscode/*
+!.vscode/launch.json
+!.vscode/settings.json
+.claude/
+Thumbs.db
+.DS_Store
+
+# Caches gerados por ferramentas de Java nas amostras
+.gradle/

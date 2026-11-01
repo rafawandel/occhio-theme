@@ -1,0 +1,8 @@
+2026-10-01 08:00:01.123 INFO  [main] Iniciando aplicacao versao 1.2.0
+2026-10-01 08:00:02.456 DEBUG [pool-1] Conectado em http://localhost:8000/saude
+2026-10-01 08:00:05.789 WARN  [pool-2] Tempo de resposta alto: 1530 ms
+2026-10-01 08:00:07.001 ERROR [pool-2] Falha ao ler arquivo C:\dados\acervo.db
+java.lang.IllegalStateException: estado invalido
+    at exemplo.acervo.Emprestimo.toString(Emprestimo.java:58)
+2026-10-01 08:00:09.000 INFO  [main] Requisicao 3fa85f64-5717-4562-b3fc-2c963f66afa6 concluida com true
+[2026-10-01T08:00:10Z] [critical] servico parado

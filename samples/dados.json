@@ -1,0 +1,18 @@
+{
+  "nome": "acervo",
+  "versao": "1.2.0",
+  "ativo": true,
+  "limite": 50,
+  "fator": 1.5e3,
+  "responsavel": null,
+  "temas": ["poesia", "historia", "ciencia"],
+  "salas": [
+    { "codigo": 1, "andar": "terreo", "capacidade": 120 },
+    { "codigo": 2, "andar": "primeiro", "capacidade": 80 }
+  ],
+  "config": {
+    "url": "https://api.example.com/v1",
+    "caminho": "C:\\dados\\acervo",
+    "horario": { "abre": "08:00", "fecha": "18:00" }
+  }
+}

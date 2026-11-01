@@ -1,0 +1,6 @@
+{
+    // As amostras nao sao projetos: evita que a extensao Java importe samples/build.gradle e samples/pom.xml
+    "java.import.exclusions": ["**/samples/**", "**/node_modules/**", "**/.metadata/**", "**/archetype-resources/**", "**/META-INF/maven/**"],
+    "java.import.gradle.enabled": false,
+    "java.import.maven.enabled": false
+}

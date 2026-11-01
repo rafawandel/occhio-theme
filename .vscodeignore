@@ -1,0 +1,10 @@
+.vscode/**
+build_theme.py
+samples/**
+tools/**
+*.vsix
+__pycache__/**
+*.zip
+CLAUDE.md
+.claude/**
+.gitignore

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Acervo</title>
+  <link rel="stylesheet" href="estilo.css">
+  <style>
+    body { background: #080c10; color: #c8d8e8; }
+    .destaque:hover { color: #00d4ff; }
+  </style>
+</head>
+<body>
+  <!-- Cabecalho da pagina -->
+  <header class="topo">
+    <h1>Acervo &amp; leituras</h1>
+    <nav><a href="/livros" target="_blank">Livros</a></nav>
+  </header>
+  <main>
+    <form action="/buscar" method="get">
+      <label for="termo">Termo</label>
+      <input id="termo" name="termo" required>
+      <button type="submit" class="destaque">Buscar</button>
+    </form>
+    <p>{{ mensagem }}</p>
+    {% for item in itens %}<p>{{ item.titulo }}</p>{% endfor %}
+  </main>
+  <script type="module">
+    const botao = document.querySelector('.destaque');
+    botao.addEventListener('click', (e) => console.log('clicou', e.target));
+  </script>
+</body>
+</html>

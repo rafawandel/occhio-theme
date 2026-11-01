@@ -1,0 +1,23 @@
+{# Template Jinja de exemplo #}
+{% extends "base.html" %}
+{% from "macros.html" import cartao %}
+
+{% block conteudo %}
+<section class="lista">
+  <h1>{{ titulo | upper }}</h1>
+  {% if obras %}
+    <ul>
+    {% for obra in obras if obra.ativa %}
+      <li class="{{ loop.cycle('par', 'impar') }}">
+        {{ obra.titulo }} ({{ obra.ano | default("sem ano") }})
+        {{ cartao(obra, mostrar=True) }}
+      </li>
+    {% endfor %}
+    </ul>
+  {% else %}
+    <p>Nenhuma obra encontrada, total {{ total + 1 }}</p>
+  {% endif %}
+  {% set aviso = "Atualizado em " ~ data %}
+  {{ aviso }}
+</section>
+{% endblock %}

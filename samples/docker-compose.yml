@@ -1,0 +1,30 @@
+# Configuracao do ambiente de testes
+version: "3.9"
+
+x-padrao: &padrao
+  restart: unless-stopped
+  logging:
+    driver: json-file
+
+services:
+  api:
+    <<: *padrao
+    image: registry.example.com/exemplo/api:1.4.2
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      AMBIENTE: teste
+      BANCO_URL: ${BANCO_URL}
+      DEBUG: false
+      PROCESSOS: 4
+    volumes:
+      - ./logs:/app/logs
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/saude"]
+      interval: 30s
+  descricao: |
+    Bloco de texto
+    em varias linhas

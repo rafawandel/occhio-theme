@@ -1,0 +1,25 @@
+# Projeto Python de exemplo
+[project]
+name = "acervo"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = ["fastapi>=0.115", "sqlalchemy~=2.0"]
+ativo = true
+limite = 50
+fator = 1.5
+criado = 2026-01-15T08:00:00Z
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff"]
+
+[tool.ruff]
+line-length = 110
+lint.select = ["E", "F", "I"]
+
+[[tool.mypy.overrides]]
+module = "acervo.*"
+strict = true
+texto = '''
+Bloco literal
+em varias linhas
+'''

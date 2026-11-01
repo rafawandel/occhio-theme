@@ -1,0 +1,12 @@
+// JSON com comentarios (JSONC), como tsconfig e settings do VS Code
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "strict": true,
+    /* Caminhos curtos */
+    "paths": { "@app/*": ["src/app/*"] },
+    "jsx": "react-jsx",
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+}

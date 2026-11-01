@@ -1,0 +1,6 @@
+# Arquivos ignorados
+node_modules/
+*.vsix
+__pycache__/
+!manter.log
+/dist
